@@ -1,0 +1,61 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[2][2]
+        inteiro i, j
+        inteiro maior, menor
+        inteiro linhaMaior, colunaMaior
+        inteiro linhaMenor, colunaMenor
+
+        // Preenchendo a matriz
+        para (i = 0; i < 2; i++)
+        {
+            para (j = 0; j < 2; j++)
+            {
+                escreva("Digite um número: ")
+                leia(matriz[i][j])
+            }
+        }
+
+        // Inicializando maior e menor com o primeiro elemento
+        maior = matriz[0][0]
+        menor = matriz[0][0]
+
+        linhaMaior = 0
+        colunaMaior = 0
+
+        linhaMenor = 0
+        colunaMenor = 0
+
+        // Procurando o maior e o menor valor
+        para (i = 0; i < 2; i++)
+        {
+            para (j = 0; j < 2; j++)
+            {
+                se (matriz[i][j] > maior)
+                {
+                    maior = matriz[i][j]
+                    linhaMaior = i
+                    colunaMaior = j
+                }
+
+                se (matriz[i][j] < menor)
+                {
+                    menor = matriz[i][j]
+                    linhaMenor = i
+                    colunaMenor = j
+                }
+            }
+        }
+
+        // Mostrando os resultados
+        escreva("\nMaior valor: ", maior)
+        escreva("\nLocalização: linha ", linhaMaior, 
+                " e coluna ", colunaMaior)
+
+        escreva("\n\nMenor valor: ", menor)
+        escreva("\nLocalização: linha ", linhaMenor, 
+                " e coluna ", colunaMenor)
+    }
+}
