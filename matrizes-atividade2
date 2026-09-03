@@ -1,0 +1,43 @@
+programa
+{
+    funcao inicio()
+    {
+        inteiro matriz[2][2]
+        inteiro i, j, numero
+
+        // Preenchendo a matriz
+        para (i = 0; i < 2; i++)
+        {
+            para (j = 0; j < 2; j++)
+            {
+                escreva("Digite um número: ")
+                leia(matriz[i][j])
+            }
+        }
+
+        // Número que será somado
+        escreva("Digite o número que deseja somar: ")
+        leia(numero)
+
+        // Somando o número a todos os elementos
+        para (i = 0; i < 2; i++)
+        {
+            para (j = 0; j < 2; j++)
+            {
+                matriz[i][j] = matriz[i][j] + numero
+            }
+        }
+
+        // Mostrando a nova matriz
+        escreva("\nMatriz atualizada:\n")
+
+        para (i = 0; i < 2; i++)
+        {
+            para (j = 0; j < 2; j++)
+            {
+                escreva(matriz[i][j], " ")
+            }
+            escreva("\n")
+        }
+    }
+}
